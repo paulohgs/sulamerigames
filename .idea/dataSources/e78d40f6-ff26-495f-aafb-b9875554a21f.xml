@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sulamerigames@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
+    <root id="1">
+      <ServerVersion>14.8</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="mydatabase"/>
+    <database id="3" parent="1" name="postgres"/>
+    <database id="4" parent="1" name="sulamerigames">
+      <Current>1</Current>
+    </database>
+    <database id="5" parent="1" name="template0"/>
+    <database id="6" parent="1" name="template1"/>
+    <schema id="7" parent="4" name="information_schema"/>
+    <schema id="8" parent="4" name="pg_catalog"/>
+    <schema id="9" parent="4" name="public">
+      <Current>1</Current>
+    </schema>
+    <sequence id="10" parent="9" name="administrador_id_seq"/>
+    <sequence id="11" parent="9" name="categoria_id_seq"/>
+    <sequence id="12" parent="9" name="cliente_id_seq"/>
+    <sequence id="13" parent="9" name="produto_id_seq"/>
+    <table id="14" parent="9" name="administrador"/>
+    <table id="15" parent="9" name="categoria"/>
+    <table id="16" parent="9" name="cliente"/>
+    <table id="17" parent="9" name="produto"/>
+    <column id="18" parent="14" name="id">
+      <DasType>int4|4s</DasType>
+      <DefaultExpression>nextval(&apos;administrador_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="19" parent="14" name="name">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="20" parent="14" name="email">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="21" parent="14" name="password">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="22" parent="14" name="endereco">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="23" parent="14" name="administrador_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="14" name="administrador_pkey">
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="25" parent="15" name="id">
+      <DasType>int4|4s</DasType>
+      <DefaultExpression>nextval(&apos;categoria_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="26" parent="15" name="description">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="27" parent="15" name="categoria_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="15" name="categoria_pkey">
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="29" parent="16" name="id">
+      <DasType>int4|4s</DasType>
+      <DefaultExpression>nextval(&apos;cliente_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="30" parent="16" name="name">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="31" parent="16" name="email">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="32" parent="16" name="login">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="33" parent="16" name="password">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="34" parent="16" name="endereco">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="35" parent="16" name="cliente_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="16" name="cliente_pkey">
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="37" parent="17" name="id">
+      <DasType>int4|4s</DasType>
+      <DefaultExpression>nextval(&apos;produto_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="38" parent="17" name="preco">
+      <DasType>money|8s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="39" parent="17" name="quantity">
+      <DasType>int4|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="40" parent="17" name="description">
+      <DasType>varchar|12s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="41" parent="17" name="produto_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="17" name="produto_pkey">
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+  </database-model>
+</dataSource>

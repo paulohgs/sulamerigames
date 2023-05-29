@@ -2,11 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>Sulamerigames - Sua melhor loja de jogos latina!</title>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
+<h1><%= "Seja bem-vindo!" %></h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="Login">Login</a>
+<br/>
+<a href="Signup">Cadastre-se</a>
 </body>
 </html>
