@@ -8,22 +8,23 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Login</title>
-  </head>
-  <body>
-    <h1>Identificação do Usuário</h1>
-    <form action="Login" method="post">
-      <label>
+</head>
+<body>
+<h1>Identificação do Usuário</h1>
+<form action="LoginAdm" method="post">
+    <label>
         Usuário:<input type="text" name="login" placeholder="usuário">
-      </label>
-      <br>
-      <label>
+    </label>
+    <br>
+    <label>
         Senha:<input type="password" name="senha" placeholder="senha">
-      </label>
-      <br>
-      <input type="submit" value="Entrar">
-    </form>
-  </body>
+    </label>
+    <br>
+    <input type="submit" value="Entrar">
+</form>
+
+</body>
 </html>

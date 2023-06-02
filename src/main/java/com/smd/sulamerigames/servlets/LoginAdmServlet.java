@@ -1,34 +1,33 @@
 package com.smd.sulamerigames.servlets;
 
-import com.smd.sulamerigames.client.Client;
-import com.smd.sulamerigames.client.ClientDAO;
+import com.smd.sulamerigames.admin.AdminDAO;
+import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class LoginServlet extends HttpServlet {
+public class LoginAdmServlet extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
 
-        boolean result = ClientDAO.validLogin(login, senha);
+        boolean result = AdminDAO.validLogin(login, senha);
 
         PrintWriter out = response.getWriter();
         if(login == null || senha == null || login.isEmpty() || senha.isEmpty()) {
             response.sendRedirect("login.jsp");
             out.println("Usuário não existe, ou estão vazios!");
         } else if(result) {
-            Client cliente = ClientDAO.getClient(login);
-            request.getSession().setAttribute("cliente", cliente);
+            request.getSession().setAttribute("cliente", result);
             response.sendRedirect("session.jsp");
         }
+
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

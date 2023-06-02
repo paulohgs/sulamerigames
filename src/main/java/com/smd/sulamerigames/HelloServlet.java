@@ -23,7 +23,7 @@ public class HelloServlet extends HttpServlet {
             } else {
                 System.out.println("Erro ao realizar cadastro");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         response.setContentType("text/html");

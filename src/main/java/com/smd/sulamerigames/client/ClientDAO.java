@@ -11,7 +11,7 @@ public class ClientDAO {
     static String pswd = System.getenv("PASSWORD_DATABASE");
     static Connection conn;
 
-    static public boolean insert(Client cliente) throws SQLException {
+    static public boolean insert(Client cliente) {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pswd);
@@ -31,7 +31,7 @@ public class ClientDAO {
         return false;
     }
 
-    public boolean remove(Integer idClient) {
+    static public boolean remove(Integer idClient) {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pswd);
@@ -47,7 +47,7 @@ public class ClientDAO {
         return false;
     }
 
-    public boolean update(Client cliente) {
+    static public boolean update(Client cliente) {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pswd);
@@ -68,7 +68,7 @@ public class ClientDAO {
         return false;
     }
 
-    public List<Client> listAllUsers() {
+    static public List<Client> listAllUsers() {
         List<Client> result = new ArrayList<>();
         try {
             Class.forName(driver);
@@ -93,7 +93,7 @@ public class ClientDAO {
         return result;
     }
 
-    public Client getClient(String loginUsed) {
+    static public Client getClient(String loginUsed) {
         Client cliente = new Client("","","","","");
         try {
             Class.forName(driver);
@@ -118,5 +118,21 @@ public class ClientDAO {
             e.printStackTrace(System.err);
         }
         return null;
+    }
+
+    static public boolean validLogin(String login, String password) {
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pswd);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM cliente WHERE login=? AND password=?");
+            ps.setString(1,login);
+            ps.setString(2,password);
+            ps.close();
+            conn.close();
+            return true;
+        } catch(SQLException | ClassNotFoundException e) {
+            e.printStackTrace(System.err);
+        }
+        return false;
     }
 }
