@@ -1,18 +1,69 @@
 package com.smd.sulamerigames.client;
 
-import com.smd.sulamerigames.interfaces.User;
+public class Client {
 
-public class Client implements User {
 
-    String name;
-    ClientDAO dao = new ClientDAO();
+    private Integer id;
+    private String nome;
+    private String senha;
+    private String login;
+    private String endereco;
+    private String email;
 
-    public Client(String name) {
-        this.name = name;
+    public Client(String nome, String senha, String login, String endereco, String email) {
+        this.nome = nome;
+        this.senha = senha;
+        this.login = login;
+        this.endereco = endereco;
+        this.email = email;
     }
 
-    @Override
-    public void getAllUsers() {
-
+    public String getNome() {
+        return nome;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
 }

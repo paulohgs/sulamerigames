@@ -9,6 +9,6 @@
 <br/>
 <a href="Login">Login</a>
 <br/>
-<a href="Signup">Cadastre-se</a>
+<a href="cadastro.jsp">Cadastre-se</a>
 </body>
 </html>
