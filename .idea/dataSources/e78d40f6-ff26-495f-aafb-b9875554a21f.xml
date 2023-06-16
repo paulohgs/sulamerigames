@@ -3,22 +3,14 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-14041||-9223372036854775808|c|G
-14041||10|c|G
-14041||10|C|G
-14041||10|T|G
-16385||-9223372036854775808|c|G
+      <Grants>16385||-9223372036854775808|c|G
 16385||16384|c|G
 16385||16384|C|G
 16385||-9223372036854775808|T|G
 16385||16384|T|G</Grants>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>764</IntrospectionStateNumber>
       <ServerVersion>14.8</ServerVersion>
-      <StartupTime>1685123213</StartupTime>
+      <StartupTime>1685965191</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -803,14 +795,14 @@ false Z
 false Zulu
 </TimeZones>
     </root>
-    <database id="2" parent="1" name="postgres">
+    <database id="2" parent="1" name="mydatabase">
+      <ObjectId>16385</ObjectId>
+      <OwnerName>myuser</OwnerName>
+    </database>
+    <database id="3" parent="1" name="postgres">
       <Comment>default administrative connection database</Comment>
       <ObjectId>14042</ObjectId>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
-    </database>
-    <database id="3" parent="1" name="mydatabase">
-      <ObjectId>16385</ObjectId>
-      <OwnerName>myuser</OwnerName>
     </database>
     <database id="4" parent="1" name="sulamerigames">
       <Current>1</Current>
@@ -824,7 +816,7 @@ false Zulu
 13676||10|C|G
 13676||-9223372036854775808|U|G
 13676||10|U|G</Grants>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>764</IntrospectionStateNumber>
       <ObjectId>16386</ObjectId>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </database>
@@ -833,40 +825,7 @@ false Zulu
       <CreateDb>1</CreateDb>
       <ObjectId>16384</ObjectId>
     </role>
-    <role id="6" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="7" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="8" parent="1" name="pg_read_server_files">
-      <ObjectId>4569</ObjectId>
-    </role>
-    <role id="9" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="10" parent="1" name="pg_read_all_stats">
-      <ObjectId>3375</ObjectId>
-    </role>
-    <role id="11" parent="1" name="pg_read_all_settings">
-      <ObjectId>3374</ObjectId>
-    </role>
-    <role id="12" parent="1" name="pg_monitor">
-      <ObjectId>3373</ObjectId>
-      <RoleGrants>3374
-3375
-3377</RoleGrants>
-    </role>
-    <role id="13" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="15" parent="1" name="pg_database_owner">
-      <ObjectId>6171</ObjectId>
-    </role>
-    <role id="16" parent="1" name="paulohenriquegomesdasilva">
+    <role id="6" parent="1" name="paulohenriquegomesdasilva">
       <BypassRls>1</BypassRls>
       <CanLogin>1</CanLogin>
       <CreateDb>1</CreateDb>
@@ -875,16 +834,49 @@ false Zulu
       <Replication>1</Replication>
       <SuperRole>1</SuperRole>
     </role>
-    <role id="17" parent="1" name="pg_signal_backend">
+    <role id="7" parent="1" name="pg_database_owner">
+      <ObjectId>6171</ObjectId>
+    </role>
+    <role id="8" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <RoleGrants>3374
+3375
+3377</RoleGrants>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <tablespace id="18" parent="1" name="pg_global">
-      <ObjectId>1664</ObjectId>
+    <role id="15" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="16" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <tablespace id="18" parent="1" name="pg_default">
+      <ObjectId>1663</ObjectId>
       <StateNumber>1</StateNumber>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </tablespace>
-    <tablespace id="19" parent="1" name="pg_default">
-      <ObjectId>1663</ObjectId>
+    <tablespace id="19" parent="1" name="pg_global">
+      <ObjectId>1664</ObjectId>
       <StateNumber>1</StateNumber>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </tablespace>
@@ -4254,7 +4246,7 @@ false Zulu
     <schema id="264" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>764</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
@@ -4278,7 +4270,7 @@ false Zulu
     <sequence id="267" parent="264" name="cliente_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16387</ObjectId>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1(6)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>738</StateNumber>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
@@ -4331,7 +4323,7 @@ false Zulu
     </table>
     <table id="275" parent="264" name="produto">
       <ObjectId>16406</ObjectId>
-      <StateNumber>746</StateNumber>
+      <StateNumber>763</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </table>
@@ -4614,11 +4606,11 @@ produto_id</ColNames>
       <TypeId>23</TypeId>
     </column>
     <column id="311" parent="275" name="preco">
-      <DasType>money|0s</DasType>
+      <DasType>numeric|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>741</StateNumber>
-      <TypeId>790</TypeId>
+      <StateNumber>762</StateNumber>
+      <TypeId>1700</TypeId>
     </column>
     <column id="312" parent="275" name="quantity">
       <DasType>integer|0s</DasType>
@@ -4639,7 +4631,14 @@ produto_id</ColNames>
       <StateNumber>746</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="315" parent="275" name="categoria_id_produto">
+    <column id="315" parent="275" name="nome">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>763</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="316" parent="275" name="categoria_id_produto">
       <ColNames>categoria_id</ColNames>
       <ObjectId>16432</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4649,16 +4648,16 @@ produto_id</ColNames>
       <RefTableName>categoria</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="316" parent="275" name="produto_pkey">
+    <index id="317" parent="275" name="produto_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>741</StateNumber>
+      <StateNumber>762</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="317" parent="275" name="produto_pkey">
+    <key id="318" parent="275" name="produto_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16413</ObjectId>
       <Primary>1</Primary>
