@@ -2,13 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="resources/style.css" rel="stylesheet">
   <title>Sulamerigames - Sua melhor loja de jogos latina!</title>
 </head>
 <body>
-<h1><%= "Seja bem-vindo!" %></h1>
-<br/>
-<a href="Login">Login</a>
-<br/>
-<a href="Cliente/cadastro.jsp">Cadastre-se</a>
+  <header>
+    <nav>
+      <a href="index.jsp">
+        <h1>E-comerce</h1>
+      </a>
+      <a href="cliente/login.jsp">Login</a>
+      <a href="#">Carrinho</a>
+      <a href="#">Produtos</a>
+    </nav>
+  </header>
 </body>
 </html>
+

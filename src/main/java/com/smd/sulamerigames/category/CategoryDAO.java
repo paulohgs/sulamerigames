@@ -1,6 +1,9 @@
 package com.smd.sulamerigames.category;
 
+import java.awt.*;
 import java.sql.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class CategoryDAO {
     static String driver = "org.postgresql.Driver";
@@ -45,5 +48,27 @@ public class CategoryDAO {
             error.printStackTrace(System.err);
         }
         return null;
+    }
+
+    static public List<Category> getAllCategories() {
+        List<Category> categorias = new ArrayList<>();
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url,user,pswd);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM categoria");
+            ResultSet set = ps.executeQuery();
+            while(set.next()) {
+                Integer id = set.getInt("id");
+                String descricao = set.getString("description");
+                Category categoria = new Category(id,descricao);
+                categorias.add(categoria);
+            }
+            set.close();
+            ps.close();
+            conn.close();
+        } catch(SQLException | ClassNotFoundException error) {
+            error.printStackTrace(System.err);
+        }
+        return categorias;
     }
 }
