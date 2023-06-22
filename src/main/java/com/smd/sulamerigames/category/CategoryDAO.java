@@ -1,6 +1,5 @@
 package com.smd.sulamerigames.category;
 
-import java.awt.*;
 import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -70,5 +69,38 @@ public class CategoryDAO {
             error.printStackTrace(System.err);
         }
         return categorias;
+    }
+
+    static public Boolean update(Integer id, String valor) {
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url,user,pswd);
+            PreparedStatement ps = conn.prepareStatement("UPDATE categoria set description = ? WHERE id=?");
+            ps.setString(1, valor);
+            ps.setInt(2, id);
+            ps.execute();
+            ps.close();
+            conn.close();
+            return true;
+        } catch (SQLException | ClassNotFoundException error){
+            error.printStackTrace(System.err);
+        }
+        return false;
+    }
+
+    static public Boolean remove(Integer id) {
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url,user,pswd);
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM categoria WHERE id=?");
+            ps.setInt(1, id);
+            ps.execute();
+            ps.close();
+            conn.close();
+            return true;
+        } catch(SQLException | ClassNotFoundException error) {
+            error.printStackTrace(System.err);
+        }
+        return false;
     }
 }
