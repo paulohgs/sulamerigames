@@ -8,7 +8,7 @@
 16385||16384|C|G
 16385||-9223372036854775808|T|G
 16385||16384|T|G</Grants>
-      <IntrospectionStateNumber>764</IntrospectionStateNumber>
+      <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <ServerVersion>14.8</ServerVersion>
       <StartupTime>1685965191</StartupTime>
       <TimeZones>true ACDT
@@ -816,7 +816,7 @@ false Zulu
 13676||10|C|G
 13676||-9223372036854775808|U|G
 13676||10|U|G</Grants>
-      <IntrospectionStateNumber>764</IntrospectionStateNumber>
+      <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <ObjectId>16386</ObjectId>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </database>
@@ -4246,7 +4246,7 @@ false Zulu
     <schema id="264" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>764</IntrospectionStateNumber>
+      <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
@@ -4323,7 +4323,7 @@ false Zulu
     </table>
     <table id="275" parent="264" name="produto">
       <ObjectId>16406</ObjectId>
-      <StateNumber>763</StateNumber>
+      <StateNumber>765</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>paulohenriquegomesdasilva</OwnerName>
     </table>
@@ -4638,7 +4638,14 @@ produto_id</ColNames>
       <StateNumber>763</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="316" parent="275" name="categoria_id_produto">
+    <column id="316" parent="275" name="imagem">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="317" parent="275" name="categoria_id_produto">
       <ColNames>categoria_id</ColNames>
       <ObjectId>16432</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4648,7 +4655,7 @@ produto_id</ColNames>
       <RefTableName>categoria</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="317" parent="275" name="produto_pkey">
+    <index id="318" parent="275" name="produto_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
@@ -4657,7 +4664,7 @@ produto_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="318" parent="275" name="produto_pkey">
+    <key id="319" parent="275" name="produto_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16413</ObjectId>
       <Primary>1</Primary>

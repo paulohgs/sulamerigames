@@ -12,21 +12,16 @@ public class Product {
     protected BigDecimal preco;
     protected Integer quantidade;
     protected Category categoria;
+    protected String imagem;
 
-    public Product(
-            Integer id,
-            String nome,
-            String description,
-            BigDecimal preco,
-            Integer quantidade,
-            Category categoria
-    ) {
+    public Product(Integer id, String nome, String description, BigDecimal preco, Integer quantidade, Category categoria, String imagem) {
         this.id = id;
         this.nome = nome;
         this.description = description;
         this.preco = preco;
         this.quantidade = quantidade;
         this.categoria = categoria;
+        this.imagem = imagem;
     }
 
     public Integer getId() {
@@ -76,5 +71,13 @@ public class Product {
 
     public void setCategoria(Category categoria) {
         this.categoria = categoria;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }
