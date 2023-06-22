@@ -67,7 +67,8 @@ public class ProductDAO {
                 String nome = set.getString("nome");
                 String imagem = set.getString("imagem");
                 Category categoria = CategoryDAO.getCategory(categoria_id);
-                Product produto = new Product(id,nome,descricao,preco,quantidade,categoria, imagem);
+                Product produto = new Product(nome,descricao,preco,quantidade,categoria, imagem);
+                produto.setId(id);
                 produtos.add(produto);
             }
             set.close();
