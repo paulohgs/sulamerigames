@@ -11,16 +11,18 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
       <div class="container-fluid">
+        <div class="mb-3 mt-3">
+        <nav class="navbar navbar-dark bg-dark" >
         <div class="navbar nav">
-          <a href="index.jsp" class="nav-link">E-comerce</a>
-          <a href="cliente/login.jsp" class="nav-link">Login</a>
-          <a href="#" class="nav-link">Carrinho</a>
-          <a href="#" class="nav-link">Produtos</a>
+          <a href="index.jsp"  style="color: white" class="nav-link">E-comerce</a>
+          <a href="cliente/login.jsp"  style="color: white" class="nav-link">Login</a>
+          <a href="#"  style="color: white" class="nav-link">Carrinho</a>
+          <a href="#"  style="color: white" class="nav-link">Produtos</a>
         </div>
+        </nav>
       </div>
-    </nav>
+    </div>
   </header>
 </body>
 </html>
