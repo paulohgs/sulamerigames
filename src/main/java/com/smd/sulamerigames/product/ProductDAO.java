@@ -37,7 +37,7 @@ public class ProductDAO {
         return false;
     }
 
-    static public Boolean removeProduct(Integer id) {
+    static public Boolean remove(Integer id) {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url,user,pswd);
