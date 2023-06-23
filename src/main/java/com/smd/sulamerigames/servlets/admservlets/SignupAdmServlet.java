@@ -1,5 +1,7 @@
-package com.smd.sulamerigames.servlets;
+package com.smd.sulamerigames.servlets.admservlets;
 
+import com.smd.sulamerigames.admin.Admin;
+import com.smd.sulamerigames.admin.AdminDAO;
 import com.smd.sulamerigames.client.Client;
 import com.smd.sulamerigames.client.ClientDAO;
 import jakarta.servlet.http.*;
@@ -7,7 +9,7 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class SignupServlet extends HttpServlet {
+public class SignupAdmServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String nome = request.getParameter("nome");
@@ -15,9 +17,9 @@ public class SignupServlet extends HttpServlet {
         String email = request.getParameter("email");
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
-        Client cliente = new Client(nome,senha,login,endereco,email);
+        Admin admin = new Admin(nome,senha,login,endereco,email);
 
-        boolean result = ClientDAO.insert(cliente);
+        boolean result = AdminDAO.insert(admin);
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
