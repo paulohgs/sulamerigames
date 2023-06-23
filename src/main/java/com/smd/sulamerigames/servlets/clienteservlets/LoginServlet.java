@@ -1,4 +1,4 @@
-package com.smd.sulamerigames.servlets;
+package com.smd.sulamerigames.servlets.clienteservlets;
 
 import com.smd.sulamerigames.client.Client;
 import com.smd.sulamerigames.client.ClientDAO;
