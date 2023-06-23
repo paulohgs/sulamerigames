@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <!-- Servlets -->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.LoginServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SignupServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.SignupServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.SignupServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -21,15 +22,15 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>LoginAdmServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.LoginServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SignupAdmServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.SignupServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.SignupServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.UpdateServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.UpdateServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginAdmServlet</servlet-name>
@@ -43,7 +44,33 @@
         <servlet-name>UpdateServlet</servlet-name>
         <url-pattern>/Update</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterProductServlet</servlet-name>
+        <servlet-class>com.smd.sulamerigames.servlets.productsservlets.RegisterProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterProductServlet</servlet-name>
+        <url-pattern>/RegisterProduct</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListAllProductsServlet</servlet-name>
+        <servlet-class>com.smd.sulamerigames.servlets.productsservlets.ListAllProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListAllProductsServlet</servlet-name>
+        <url-pattern>/ListAllProducts</url-pattern>
+    </servlet-mapping>
+    <!--  Sessão  -->
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+    <!-- Filtros -->
+    <filter>
+        <filter-name>validateAdm</filter-name>
+        <filter-class>com.smd.sulamerigames.filters.ValidateFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>validateAdm</filter-name>
+        <url-pattern>/Login</url-pattern>
+    </filter-mapping>
 </web-app>

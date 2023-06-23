@@ -1,4 +1,4 @@
-package com.smd.sulamerigames.servlets;
+package com.smd.sulamerigames.servlets.admservlets;
 
 import com.smd.sulamerigames.admin.AdminDAO;
 import jakarta.servlet.*;

@@ -1,4 +1,4 @@
-package com.smd.sulamerigames.servlets;
+package com.smd.sulamerigames.servlets.clienteservlets;
 
 import com.smd.sulamerigames.client.Client;
 import com.smd.sulamerigames.client.ClientDAO;
@@ -21,7 +21,7 @@ public class UpdateServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         if(login == null || senha == null || login.isEmpty() || senha.isEmpty()) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("cliente/login.jsp");
             out.println("Usuário não existe, ou estão vazios!");
         } else if(result) {
             Client cliente = ClientDAO.getClient(login);

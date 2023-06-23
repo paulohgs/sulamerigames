@@ -9,9 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67017a76-9c95-4371-8150-434b56d9f9b8" name="Changes" comment="Termino do front end da tela de Login">
+    <list default="true" id="67017a76-9c95-4371-8150-434b56d9f9b8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/ListAllProductsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cliente/cadastro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cliente/cadastro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/LoginAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/SignupAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/SignupServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/UpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +34,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="Servlet" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="Servlet" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -123,7 +135,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-17">
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -227,15 +239,6 @@
       <workItem from="1685641397878" duration="16903000" />
       <workItem from="1686952014880" duration="14948000" />
     </task>
-    <task id="LOCAL-00001" summary="Termino do front end da tela de Login">
-      <option name="closed" value="true" />
-      <created>1687464604732</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1687464604732</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
