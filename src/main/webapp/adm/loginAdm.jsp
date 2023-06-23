@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Identificação do Usuário</h1>
-<form action="LoginAdm" method="post">
+<form action="${pageContext.request.contextPath}/LoginAdm" method="post">
     <label>
         Usuário:<input type="text" name="login" placeholder="usuário">
     </label>

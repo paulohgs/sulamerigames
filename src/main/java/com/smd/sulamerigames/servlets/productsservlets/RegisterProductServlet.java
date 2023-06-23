@@ -10,6 +10,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 public class RegisterProductServlet extends HttpServlet {
     @Override
@@ -19,8 +20,8 @@ public class RegisterProductServlet extends HttpServlet {
         Integer quantidade = Integer.valueOf(request.getParameter("quantidade"));
         BigDecimal preco = new BigDecimal(request.getParameter("preco"));
         Integer categoriaId = Integer.valueOf(request.getParameter("categoria"));
-        Category categoria = CategoryDAO.getCategory(categoriaId);
-        Product produto = new Product(nome, descricao, preco, quantidade, categoria, "");
+        Category categoria = new Category(1,"teste");
+        Product produto = new Product(nome, descricao, preco, quantidade, categoria, "teste");
 
         boolean result = ProductDAO.insertProduct(produto);
 

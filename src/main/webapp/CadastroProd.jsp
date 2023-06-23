@@ -26,7 +26,7 @@
         </div>
     </div>
 </header>
-<form action="Signup" method="post">
+<form action="${pageContext.request.contextPath}/RegisterProduct" method="post">
     <div class="container-fluid">
         <div class="mb-3 mt-3">
             <label  class="form-label">
@@ -39,14 +39,14 @@
             <label  class="form-label">
                 Preço:
                 <br>
-                <input class="form-control" type="number" name="preço" placeholder="Digite o valor">
+                <input class="form-control" type="number" min="1" step="any" name="preco" placeholder="Digite o valor">
             </label>
         </div>
         <div class="mb">
             <label  class="form-label">
                 Descrição:
                 <br>
-                <input class="form-control" type="text" name="descrição" placeholder="Digite a descrição do produto">
+                <input class="form-control" type="text" name="descricao" placeholder="Digite a descrição do produto">
             </label>
         </div>
         <div class="mb">
@@ -60,14 +60,14 @@
             <label  class="form-label">
                 Categoria:
                 <br>
-                <input class="form-control" type="text" name="categoria" placeholder="Digite qual o produto">
+                <input class="form-control" type="text" name="categoria" placeholder="Digite qual a categoria do produto">
             </label>
         </div>
         <div class="mb">
             <label  class="form-label">
                 Coloque uma foto do produto
                 <br>
-                <input class="form-control-file" type="file" name="Imagem" >
+                <input class="form-control-file" type="file" name="imagem" >
             </label>
         </div>
         <button type="submit" class="btn btn-dark">Cadastrar</button>

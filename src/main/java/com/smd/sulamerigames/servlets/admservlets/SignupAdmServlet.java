@@ -4,6 +4,8 @@ import com.smd.sulamerigames.admin.Admin;
 import com.smd.sulamerigames.admin.AdminDAO;
 import com.smd.sulamerigames.client.Client;
 import com.smd.sulamerigames.client.ClientDAO;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
@@ -11,7 +13,7 @@ import java.io.PrintWriter;
 
 public class SignupAdmServlet extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String nome = request.getParameter("nome");
         String endereco = request.getParameter("endereco");
         String email = request.getParameter("email");
@@ -21,24 +23,14 @@ public class SignupAdmServlet extends HttpServlet {
 
         boolean result = AdminDAO.insert(admin);
 
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CadastroServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            if (result) {
-                out.println("<h1>Usuário " + nome+ " cadastrado com sucesso!</h1>");
-                out.println("<a href='login.jsp'>Fazer Login</a>");
-            } else {
-                out.println("<h1>Erro ao cadastrar, tente novamente!</h1>");
-            }
-            out.println("</body>");
-            out.println("</html>");
+        if (!result) {
+            request.setAttribute("mensagem", "erro ao cadastrar admin.");
+            response.sendRedirect("adm/cadastroAdm.jsp");
         }
+        request.setAttribute("mensagem", "adm cadastrado com sucesso");
+        request.getSession().setAttribute("adm", result);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("adm/loginAdm.jsp");
+        dispatcher.forward(request,response);
     }
 
     @Override

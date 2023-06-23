@@ -11,7 +11,7 @@
   <title>Sulamerigames - Cadastro Administrador</title>
 </head>
 <body>
-<form action="SignupAdm" method="post">
+<form action="${pageContext.request.contextPath}/SignupAdm" method="post">
   <label>
     Nome: <input type="text" name="nome">
   </label>

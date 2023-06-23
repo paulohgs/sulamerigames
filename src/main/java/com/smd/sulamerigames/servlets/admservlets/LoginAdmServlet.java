@@ -15,15 +15,14 @@ public class LoginAdmServlet extends HttpServlet {
 
         boolean result = AdminDAO.validLogin(login, senha);
 
-        PrintWriter out = response.getWriter();
         if(login == null || senha == null || login.isEmpty() || senha.isEmpty()) {
-            response.sendRedirect("login.jsp");
-            out.println("Usuário não existe, ou estão vazios!");
-        } else if(result) {
-            request.getSession().setAttribute("cliente", result);
-            response.sendRedirect("session.jsp");
+            request.setAttribute("mensagem", "Administrador não encontrado.");
+            response.sendRedirect("adm/loginAdm.jsp");
         }
-
+        request.setAttribute("mensagem", "Administrador logado com sucesso.");
+        request.getSession().setAttribute("cliente", result);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("CadastroProd.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override

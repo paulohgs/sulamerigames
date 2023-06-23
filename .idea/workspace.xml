@@ -9,75 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67017a76-9c95-4371-8150-434b56d9f9b8" name="Changes" comment="Termino do front End do cadastro">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/CadastroProd.jsp" afterDir="false" />
-    <list default="true" id="67017a76-9c95-4371-8150-434b56d9f9b8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/ListAllProductsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/listProducts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1ce10868-7ab0-4a0e-a9ad-638e01238ff9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/LoginAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/SignupAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/SignupServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/clienteservlets/UpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/CadastroProd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CadastroProd.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adm/cadastroAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adm/cadastroAdm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adm/loginAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adm/loginAdm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cliente/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cliente/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/session.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/session.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="CSS File" />
-        <option value="Class" />
-        <option value="Servlet" />
-        <option value="Jsp File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="FrontEnd_Cadastro" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="FrontEnd_Cadastro" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="39e0adb5-6292-41c4-909f-0dbfbd404596" />
-        <option name="url" value="https://github.com/paulohgs/sulamerigames.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -86,60 +34,28 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
-        <option name="usePluginRegistry" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2QR1rTisa55Hlrsrud2eUrt4kyj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
-    ]
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/ADM" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/Cliente" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-17">
-      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="sulamerigames:war exploded">
@@ -149,7 +65,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="4a66263d-d3e7-4b6f-8e73-47f1c4856dd4" />
+        <option name="BASE_DIRECTORY_NAME" value="28d5f46c-1973-48c8-9afd-6bc058cb3c07" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -157,7 +73,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="59901" />
+        <option name="DEBUG_PORT" value="50745" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -227,72 +143,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="67017a76-9c95-4371-8150-434b56d9f9b8" name="Changes" comment="" />
-      <created>1685301778824</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1685301778824</updated>
-      <workItem from="1685301779863" duration="85000" />
-      <workItem from="1685321605406" duration="1310000" />
-      <workItem from="1685322928605" duration="3305000" />
-      <workItem from="1685471821910" duration="5478000" />
-      <workItem from="1685641397878" duration="16903000" />
-      <workItem from="1686952014880" duration="14948000" />
-    </task>
-    <task id="LOCAL-00001" summary="Termino do front end da tela de Login">
-      <option name="closed" value="true" />
-      <created>1687464604732</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1687464604732</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Termino do front End do cadastro">
-      <option name="closed" value="true" />
-      <created>1687470311722</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1687470311722</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="FrontEnd_Login" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Termino do front end da tela de Login" />
-    <MESSAGE value="Termino do front End do cadastro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Termino do front End do cadastro" />
   </component>
 </project>

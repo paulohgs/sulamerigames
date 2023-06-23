@@ -13,6 +13,8 @@
 <html>
 <head>
     <title>Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script type="text/javascript">
         let mensagem = "<%=(String) request.getAttribute("mensagem")%>";
         console.log(mensagem)
@@ -35,11 +37,13 @@
     <thead>
     <tr>
         <th scope="col">#</th>
+        <th scope="col">Nome</th>
         <th scope="col">Descrição</th>
         <th scope="col">Quantidade</th>
         <th scope="col">Preço</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Atualizar</th>
+        <th scope="col">Exclusão</th>
     </tr>
     </thead>
     <tbody>
@@ -49,11 +53,13 @@
     %>
     <tr>
         <th scope="row"><%= i + 1 %></th>
+        <td><%= produto.getNome()%></td>
         <td><%= produto.getDescription() %></td>
         <td><%= produto.getQuantidade() %></td>
         <td><%= decimalFormat.format(produto.getPreco()) %></td>
-        <td><a class="btn btn-primary" href="#" role="button">Alterar</a></td>
-        <td><a class="btn btn-danger" href="#" role="button">Excluir</a></td>
+        <td><%= produto.getCategoria().getDescricao()%></td>
+        <td><a class="btn btn-dark" href="#" role="button">Alterar</a></td>
+        <td><a class="btn btn-danger" href="${pageContext.request.contextPath}/RemoveProduct" role="button">Excluir</a></td>
     </tr>
     <%
         }

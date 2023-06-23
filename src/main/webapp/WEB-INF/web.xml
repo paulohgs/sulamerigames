@@ -22,11 +22,11 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>LoginAdmServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.LoginServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.admservlets.LoginAdmServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SignupAdmServlet</servlet-name>
-        <servlet-class>com.smd.sulamerigames.servlets.clienteservlets.SignupServlet</servlet-class>
+        <servlet-class>com.smd.sulamerigames.servlets.admservlets.SignupAdmServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateServlet</servlet-name>
@@ -59,6 +59,14 @@
     <servlet-mapping>
         <servlet-name>ListAllProductsServlet</servlet-name>
         <url-pattern>/ListAllProducts</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <servlet-class>com.smd.sulamerigames.servlets.productsservlets.RemoveProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <url-pattern>/RemoveProduct</url-pattern>
     </servlet-mapping>
     <!--  Sessão  -->
     <session-config>

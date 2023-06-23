@@ -16,7 +16,6 @@ public class ProductDAO {
     static Connection conn;
 
     static public Boolean insertProduct(Product produto) {
-
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pswd);
@@ -24,7 +23,7 @@ public class ProductDAO {
             ps.setBigDecimal(1, produto.preco);
             ps.setInt(2,produto.getQuantidade());
             ps.setString(3, produto.getDescription());
-            ps.setInt(4, produto.categoria.getId());
+            ps.setInt(4, produto.getCategoria().getId());
             ps.setString(5,produto.getNome());
             ps.setString(6, produto.getImagem());
             ps.execute();

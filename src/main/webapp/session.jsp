@@ -26,7 +26,7 @@
     response.getWriter().println("<h1>Usuário nulo</h1>");
   }
 %>
-<a href="Cliente/update.jsp">Alterar dados</a>
-<a href="Cliente/loggout.jsp">Sair</a>
+<a href="cliente/update.jsp">Alterar dados</a>
+<a href="cliente/loggout.jsp">Sair</a>
 </body>
 </html>

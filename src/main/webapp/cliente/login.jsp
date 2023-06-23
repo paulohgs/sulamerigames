@@ -34,7 +34,7 @@
         </div>
       </div>
     </header>
-    <form action="Login" method="post">
+    <form action="${pageContext.request.contextPath}/Login" method="post">
       <div class="container-fluid">
         <div class="mb-3 mt-3">
           <label  class="form-label">
