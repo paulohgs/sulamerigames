@@ -10,22 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce10868-7ab0-4a0e-a9ad-638e01238ff9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/UpdateAdmServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/UpdateProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e78d40f6-ff26-495f-aafb-b9875554a21f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e78d40f6-ff26-495f-aafb-b9875554a21f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/product/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/LoginAdmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/admservlets/SignupAdmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RegisterProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/CadastroProd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CadastroProd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/admin/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/admin/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RemoveProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smd/sulamerigames/servlets/productsservlets/RemoveProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adm/cadastroAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adm/cadastroAdm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adm/loginAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adm/loginAdm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cliente/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cliente/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/session.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/session.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -34,28 +45,38 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2S7vC4tqBTSBlHSbUtLrulzaEMt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="sulamerigames:war exploded">
@@ -143,7 +164,22 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ce10868-7ab0-4a0e-a9ad-638e01238ff9" name="Changes" comment="" />
+      <created>1688510308302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688510308302</updated>
+      <workItem from="1688510311860" duration="269000" />
+      <workItem from="1688510591749" duration="40000" />
+      <workItem from="1688510646322" duration="5046000" />
+      <workItem from="1688520975699" duration="3650000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

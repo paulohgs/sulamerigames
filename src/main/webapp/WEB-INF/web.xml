@@ -68,6 +68,14 @@
         <servlet-name>RemoveProductServlet</servlet-name>
         <url-pattern>/RemoveProduct</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>com.smd.sulamerigames.servlets.productsservlets.UpdateProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/UpdateProduct</url-pattern>
+    </servlet-mapping>
     <!--  Sessão  -->
     <session-config>
         <session-timeout>30</session-timeout>
@@ -80,5 +88,6 @@
     <filter-mapping>
         <filter-name>validateAdm</filter-name>
         <url-pattern>/Login</url-pattern>
+        <url-pattern>/LoginAdm</url-pattern>
     </filter-mapping>
 </web-app>
