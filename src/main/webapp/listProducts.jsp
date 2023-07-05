@@ -59,7 +59,7 @@
         <td><%= decimalFormat.format(produto.getPreco()) %></td>
         <td><%= produto.getCategoria().getDescricao()%></td>
         <td><a class="btn btn-dark" href="#" role="button">Alterar</a></td>
-        <td><a class="btn btn-danger" href="${pageContext.request.contextPath}/RemoveProduct" role="button">Excluir</a></td>
+        <td><a class="btn btn-danger" href="${pageContext.request.contextPath}/RemoveProduct?produto_id=<%=produto.getId()%>" role="button">Excluir</a></td>
     </tr>
     <%
         }

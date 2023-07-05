@@ -2,6 +2,7 @@ package com.smd.sulamerigames.admin;
 
 import com.smd.sulamerigames.client.Client;
 
+import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,23 +50,42 @@ public class AdminDAO  {
         return false;
     }
 
-    static public boolean update(Admin admin) {
+    static public boolean update(Integer admId, String campo, String valor) {
         try {
             Class.forName(driver);
-            conn = DriverManager.getConnection(url, user, pswd);
-            PreparedStatement ps = conn.prepareStatement("UPDATE admin SET name=?, email=?, login=?, password=?, address=? WHERE id=?");
-            ps.setString(1,admin.getNome());
-            ps.setString(2,admin.getEmail());
-            ps.setString(3,admin.getLogin());
-            ps.setString(4,admin.getSenha());
-            ps.setString(5,admin.getEndereco());
-            ps.setInt(6,admin.getId());
+            conn = DriverManager.getConnection(url,user,pswd);
+            PreparedStatement ps = conn.prepareStatement("UPDATE admin set ? = ? WHERE id=?");
+            switch(campo) {
+                case "senha":
+                    ps.setString(1, "senha");
+                    ps.setString(2, valor);
+                    break;
+                case "login":
+                    ps.setString(1,"login");
+                    ps.setInt(1, Integer.parseInt(valor));
+                    break;
+                case "endereco":
+                    ps.setString(1,"endereco");
+                    ps.setBigDecimal(2, new BigDecimal(valor));
+                    break;
+                case "email":
+                    ps.setString(1,"email");
+                    ps.setInt(2, Integer.parseInt(valor));
+                    break;
+                case "nome":
+                    ps.setString(1, "nome");
+                    ps.setString(2, valor);
+                    break;
+                default:
+                    break;
+            }
+            ps.setInt(3, admId);
             ps.execute();
             ps.close();
             conn.close();
             return true;
-        } catch(SQLException | ClassNotFoundException e) {
-            e.printStackTrace(System.err);
+        } catch (SQLException | ClassNotFoundException error) {
+            error.printStackTrace(System.err);
         }
         return false;
     }
