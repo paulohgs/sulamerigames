@@ -34,23 +34,27 @@
         </div>
       </div>
     </header>
-    <form action="${pageContext.request.contextPath}/Login" method="post">
-      <div class="container-fluid">
-        <div class="mb-3 mt-3">
-          <label  class="form-label">
-            Login:
-            <br>
-            <input class="form-control" type="text" name="login" placeholder="Digite seu nome de usuário">
-          </label>
-        </div>
-        <div class="mb">
-          <label class="form-label" for="inputPassword5">
-            Senha: <input class="form-control" id="inputPassword5" type="password" name="senha" placeholder="Digite sua senha">
-          </label>
-        </div>
-        <button type="submit" class="btn btn-dark">Entrar</button>
-        <p>Não possui uma conta? Faça o seu cadastro <a href="cadastro.jsp">aqui</a>!</p>
+    <main>
+      <div class="container">
+        <form action="${pageContext.request.contextPath}/Login" method="post">
+          <div class="container-fluid">
+            <div class="mb-3 mt-3">
+              <label  class="form-label">
+                Login:
+                <br>
+                <input class="form-control" type="text" name="login" placeholder="Digite seu nome de usuário">
+              </label>
+            </div>
+            <div class="mb">
+              <label class="form-label" for="inputPassword5">
+                Senha: <input class="form-control" id="inputPassword5" type="password" name="senha" placeholder="Digite sua senha">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-dark">Entrar</button>
+            <p>Não possui uma conta? Faça o seu cadastro <a href="cadastro.jsp">aqui</a>!</p>
+          </div>
+        </form>
       </div>
-    </form>
+    </main>
   </body>
 </html>

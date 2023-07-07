@@ -17,6 +17,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
+<header>
+  <div class="container-fluid">
+    <div class="mb-3 mt-3">
+      <nav class="navbar navbar-dark bg-dark" >
+        <div class="navbar nav">
+          <a href="index.jsp"  style="color: white" class="nav-link">E-comerce</a>
+          <a href="cliente/login.jsp"  style="color: white" class="nav-link">Login</a>
+          <a href="#"  style="color: white" class="nav-link">Carrinho</a>
+          <a href="#"  style="color: white" class="nav-link">Produtos</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
 <%
   HttpSession sessao = request.getSession();
   Client cliente = (Client) sessao.getAttribute("cliente");

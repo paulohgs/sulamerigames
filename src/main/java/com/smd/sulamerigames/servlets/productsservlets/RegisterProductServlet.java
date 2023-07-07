@@ -6,25 +6,41 @@ import com.smd.sulamerigames.product.Product;
 import com.smd.sulamerigames.product.ProductDAO;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.annotation.*;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.RequestContext;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.fileupload.servlet.ServletRequestContext;
 
+import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 
 public class RegisterProductServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Part filepart = request.getPart("imagem");
+        String filename = filepart.getSubmittedFileName();
+        String path = "";
+        for(Part part : request.getParts()) {
+            path = "/Users/paulohenriquegomesdasilva/dev/ufc/sulamerigames/src/main/webapp/images/" + filename;
+            part.write(path);
+        }
         String nome = request.getParameter("nome");
         String descricao = request.getParameter("descricao");
         Integer quantidade = Integer.valueOf(request.getParameter("quantidade"));
         BigDecimal preco = new BigDecimal(request.getParameter("preco"));
-        Integer categoriaId = Integer.valueOf(request.getParameter("categoria"));
-        Category categoria = new Category(1,"teste");
-        Product produto = new Product(nome, descricao, preco, quantidade, categoria, "teste");
-
+        Integer categoriaId = Integer.parseInt(request.getParameter("categoria"));
+        Category categoria = CategoryDAO.getCategoryById(categoriaId);
+        Product produto = new Product(nome, descricao, preco, quantidade, categoria, path);
         boolean result = ProductDAO.insertProduct(produto);
-
         if (!result) {
             request.setAttribute("mensagem", "Erro ao cadastrar produto.");
             response.sendError(500);

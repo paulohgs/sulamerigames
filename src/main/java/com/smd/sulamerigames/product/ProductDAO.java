@@ -62,10 +62,10 @@ public class ProductDAO {
                 BigDecimal preco = set.getBigDecimal("preco");
                 String descricao = set.getString("description");
                 Integer quantidade = set.getInt("quantity");
-                Integer categoria_id = set.getInt("categoria_id");
+                Integer categoriaId = set.getInt("categoria_id");
                 String nome = set.getString("nome");
                 String imagem = set.getString("imagem");
-                Category categoria = CategoryDAO.getCategory(categoria_id);
+                Category categoria = CategoryDAO.getCategoryById(categoriaId);
                 Product produto = new Product(nome,descricao,preco,quantidade,categoria, imagem);
                 produto.setId(id);
                 produtos.add(produto);
@@ -101,7 +101,7 @@ public class ProductDAO {
                 produto.setPreco(preco);
                 produto.setNome(nome);
                 produto.setQuantidade(quantidade);
-                produto.setCategoria(CategoryDAO.getCategory(categoria_id));
+                produto.setCategoria(CategoryDAO.getCategoryById(categoria_id));
             }
             set.close();
             ps.close();

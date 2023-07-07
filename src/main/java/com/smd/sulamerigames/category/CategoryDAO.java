@@ -27,17 +27,17 @@ public class CategoryDAO {
         return false;
     }
 
-    static public Category getCategory(Integer id) {
+    static public Category getCategory(String descricao) {
         Category categoria = new Category(0,"");
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url,user,pswd);
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM categoria WHERE id=?");
-            ps.setInt(1,id);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM categoria WHERE description=?");
+            ps.setString(1, descricao);
             ResultSet set = ps.executeQuery();
             while (set.next()) {
-                categoria.id = set.getInt("id");
-                categoria.descricao = set.getString("description");
+                categoria.setId(set.getInt("id"));
+                categoria.setDescricao(set.getString("descricao"));
             }
             set.close();
             ps.close();
@@ -102,5 +102,26 @@ public class CategoryDAO {
             error.printStackTrace(System.err);
         }
         return false;
+    }
+
+    static public Category getCategoryById(Integer id) {
+        Category categoria = new Category(0,"");
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pswd);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM categoria WHERE id=?");
+            ps.setInt(1, id);
+            ResultSet set = ps.executeQuery();
+            while(set.next()) {
+                categoria.setId(set.getInt("id"));
+                categoria.setDescricao(set.getString("description"));
+            }
+            set.close();
+            ps.close();
+            conn.close();
+        } catch(SQLException | ClassNotFoundException error) {
+            error.printStackTrace(System.err);
+        }
+        return categoria;
     }
 }

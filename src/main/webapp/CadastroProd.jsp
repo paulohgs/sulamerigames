@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.smd.sulamerigames.category.Category" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: guilh
   Date: 22/06/2023
@@ -13,20 +15,24 @@
     <title>Sulamerigames - Cadastro de Produto</title>
 </head>
 <body>
+<%
+    HttpSession sessao = request.getSession();
+%>
 <header>
     <div class="container-fluid">
         <div class="mb-3 mt-3">
             <nav class="navbar navbar-dark bg-dark" >
                 <div class="navbar nav">
-                    <a class="nav-link" style="color: white" href="../index.jsp" >
-                        Loja de jogos
-                    </a>
+                    <a href="adm/principal.jsp"  style="color: white" class="nav-link">Sulamerigames</a>
+                    <a href="CadastroProd.jsp"  style="color: white" class="nav-link">Cadastrar produto</a>
+                    <a href=""  style="color: white" class="nav-link">Cadastrar Categoria</a>
+                    <a href="${pageContext.request.contextPath}/ListAllProducts"  style="color: white" class="nav-link">Listar Produtos</a>
                 </div>
             </nav>
         </div>
     </div>
 </header>
-<form action="${pageContext.request.contextPath}/RegisterProduct" method="post">
+<form action="${pageContext.request.contextPath}/RegisterProduct" method="post" enctype="multipart/form-data">
     <div class="container-fluid">
         <div class="mb-3 mt-3">
             <label  class="form-label">
@@ -60,7 +66,19 @@
             <label  class="form-label">
                 Categoria:
                 <br>
-                <input class="form-control" type="text" name="categoria" placeholder="Digite qual a categoria do produto">
+<%--                <input class="form-control" type="text" name="categoria" placeholder="Digite qual a categoria do produto">--%>
+                <select class="form-select" aria-label="Default select example" name="categoria">
+                    <%
+                        List<Category> categorias = (ArrayList<Category>) sessao.getAttribute("categorias");
+                        if (!categorias.isEmpty()) {
+                    %>
+                            <%for(int i = 0; i < categorias.size(); i++) {
+                                Category categoria = categorias.get(i);
+                            %>
+                                <option value="<%= categoria.getId()%>"><%= categoria.getDescricao()%></option>
+                            <%}%>
+                    <%}%>
+                </select>
             </label>
         </div>
         <div class="mb">

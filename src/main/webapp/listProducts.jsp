@@ -17,19 +17,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script type="text/javascript">
         let mensagem = "<%=(String) request.getAttribute("mensagem")%>";
-        console.log(mensagem)
         function showMessage() {
-            if (mensagem !== "") {
+            if (mensagem !== "null") {
                 alert(mensagem)
             }
         }
     </script>
 </head>
-<body onload="showMessage()">
-
+<body onload="showMessage()"><!DOCTYPE html>
+<header>
+    <div class="container-fluid">
+        <div class="mb-3 mt-3">
+            <nav class="navbar navbar-dark bg-dark" >
+                <div class="navbar nav">
+                    <a href="adm/principal.jsp"  style="color: white" class="nav-link">Sulamerigames</a>
+                    <a href="CadastroProd.jsp"  style="color: white" class="nav-link">Cadastrar produto</a>
+                    <a href=""  style="color: white" class="nav-link">Cadastrar Categoria</a>
+                    <a href="${pageContext.request.contextPath}/ListAllProducts"  style="color: white" class="nav-link">Listar Produtos</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
 <%
-
-    List<Product> produtos = (List<Product>) request.getAttribute("produtos");
+    HttpSession sessao = request.getSession();
+    List<Product> produtos = (List<Product>) sessao.getAttribute("produtos");
     if(!produtos.isEmpty() || produtos != null) {
         DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", new DecimalFormatSymbols(new Locale("pt", "BR")));
 %>
@@ -58,7 +70,7 @@
         <td><%= produto.getQuantidade() %></td>
         <td><%= decimalFormat.format(produto.getPreco()) %></td>
         <td><%= produto.getCategoria().getDescricao()%></td>
-        <td><a class="btn btn-dark" href="#" role="button">Alterar</a></td>
+        <td><a class="btn btn-dark" href="adm/alterarProduto.jsp?produto_id=<%=produto.getId()%>" role="button">Alterar</a></td>
         <td><a class="btn btn-danger" href="${pageContext.request.contextPath}/RemoveProduct?produto_id=<%=produto.getId()%>" role="button">Excluir</a></td>
     </tr>
     <%

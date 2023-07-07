@@ -15,7 +15,7 @@
     HttpSession sessao = request.getSession();
     Client cliente = (Client) sessao.getAttribute("cliente");
   %>
-  <form action="Update" method="post">
+  <form action="${pageContext.request.contextPath}/Update" method="post">
     <label>
       <input type="text" placeholder="Digite seu login">
     </label>

@@ -5,34 +5,19 @@ import java.sql.SQLException;
 
 import com.smd.sulamerigames.client.Client;
 import com.smd.sulamerigames.client.ClientDAO;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
 public class HelloServlet extends HttpServlet {
-    private String message;
 
-    public void init() {
-        message = "Hello World!";
-    }
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Client cliente = new Client("Teste", "1234", "teste", "teste, 1", "teste@teste.com");
-        try {
-            boolean result = ClientDAO.insert(cliente);
-            if(result) {
-                System.out.println("Usuário cadastrado com sucesso!");
-            } else {
-                System.out.println("Erro ao realizar cadastro");
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+    @Override
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Part filepart = request.getPart("imagem");
+        String fileName = filepart.getSubmittedFileName();
+        for (Part part : request.getParts()) {
+            part.write("/Users/paulohenriquegomesdasilva/dev/ufc/sulamerigames/src/main/webapp/images/" + fileName);
         }
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        response.sendRedirect("index.jsp");
     }
 
     public void destroy() {

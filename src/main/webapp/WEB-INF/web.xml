@@ -47,7 +47,25 @@
     <servlet>
         <servlet-name>RegisterProductServlet</servlet-name>
         <servlet-class>com.smd.sulamerigames.servlets.productsservlets.RegisterProductServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>10485760</max-file-size>
+            <max-request-size>209715252428800</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
     </servlet>
+    <servlet>
+        <servlet-name>TesteUpload</servlet-name>
+        <servlet-class>com.smd.sulamerigames.HelloServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>10485760</max-file-size>
+            <max-request-size>209715252428800</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TesteUpload</servlet-name>
+        <url-pattern>/TesteUpload</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegisterProductServlet</servlet-name>
         <url-pattern>/RegisterProduct</url-pattern>
